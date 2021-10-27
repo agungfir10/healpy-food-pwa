@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+:root {
+    --btn-primary: #FFC107;
+    --btn-primary-hover: #ffd65c;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --divider: #eee;
+}
+
+body,
+html {
+    color: var(--text-primary);
+    font-family: Urbanist, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+main {
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.btn {
+    min-height: 44px;
+    padding: 11px 22px;
+    display: flex;
+    display: inline-block;
+}
+
+.btn:hover,
+.btn:focus {
+    transition: background-color 0.4s ease, color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--btn-primary);
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: #fff;
+    transition: background-color 0.4s ease, color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--btn-primary-hover);
+}
+
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.skip-to-content {
+    padding: 12px 24px;
+    font-size: 18px;
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--btn-primary);
+    z-index: 200;
+    top: -70px;
+    left: 0;
+}
+
+.skip-to-content:focus {
+    visibility: visible;
+    top: 0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    box-shadow: 0px 1px 10px 0.5px rgb(228, 228, 228);
+    z-index: 100;
+    padding: 10px 0;
+}
+
+header .container {
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    transform: translate(100%, 0);
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+header nav ul {
+    width: 60%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background-color: #fff;
+    flex-direction: column;
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li a {
+    width: 100%;
+}
+
+.logo-brand {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.logo-brand span {
+    text-shadow: 4px 4px 1px var(--btn-primary);
+}
+
+#drawer {
+    align-items: center;
+}
+
+#drawer #menu-drawer {
+    font-size: 34px;
+    padding: 8px 14px;
+    display: inline-block;
+}
+
+.open {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: visible;
+    transform: translate(0, 0);
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+#menu-drawer {
+    border: 0px;
+    background-color: transparent;
+}
+
+/* Hero */
+.hero {
+    margin-top: 60px;
+    width: 100%;
+    min-height: 720px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 14px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    max-width: 920px;
+    font-weight: 700;
+    margin: 32px 0;
+    text-shadow: 3px 3px 1px var(--text-primary);
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 32px 0;
+    max-width: 920px;
+    text-shadow: 2px 2px var(--text-primary);
+}
+
+.hero a {
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Foods */
+#foods {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+}
+
+.food-item {
+    height: 520px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 10px 1px rgb(223, 223, 223);
+    position: relative;
+    overflow: hidden;
+}
+
+#foods h3 a {
+    font-size: 26px;
+    padding: 6px 0;
+    display: inline-block;
+}
+
+main h2 {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.food-item img {
+    width: 100%;
+}
+
+.food-item__address {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--btn-primary);
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 0 20px 20px 0;
+    margin-top: 14px;
+}
+
+.food-item__content {
+    padding: 18px;
+}
+
+.food-item__thumbnail {
+    max-height: 240px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-item__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.food-item__rate {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.food-item .material-icons {
+    color: var(--btn-primary);
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--divider);
+}
+
+/* Desktop */
+@media (min-width:720px) {
+
+    #foods {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .logo-brand {
+        font-size: 40px;
+    }
+}
+
+/* Desktop */
+@media (min-width:1200px) {
+    header nav {
+        transform: translate(0, 0);
+        position: unset;
+    }
+
+    header nav ul {
+        display: flex;
+        position: inherit;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #drawer #menu-drawer {
+        display: none;
+    }
+
+    #foods {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+}
