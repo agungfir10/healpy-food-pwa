@@ -1,5 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import '../styles/responsive.css';
 
 let drawer = document.querySelector('#drawer nav');
 let menuDrawer = document.querySelector('#menu-drawer');
